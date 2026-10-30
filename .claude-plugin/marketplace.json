@@ -1,1 +1,30 @@
-{"$schema":"https://json.schemastore.org/claude-code-marketplace-manifest.json","name":"kruoop-plugins","description":"คลังปลั๊กอินและสกิลของ Kruoop — Claude Code plugins & skills marketplace","version":"0.1.0","owner":{"name":"Kruoop","url":"https://kruoop.com"},"plugins":[]}
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "kruoop-plugins",
+  "description": "คลังปลั๊กอินและสกิลของ Kruoop — Claude Code plugins & skills marketplace",
+  "version": "0.2.0",
+  "owner": {
+    "name": "Kruoop",
+    "url": "https://kruoop.com"
+  },
+  "plugins": [
+    {
+      "name": "bbn-video-studio",
+      "source": "./plugins/bbn-video-studio",
+      "version": "0.4.0",
+      "description": "BoomBigNose video workflow: 48 skills for Long, teaser Shorts, motion, audio and YouTube materials, with the latest CTA and versioned-review corrections.",
+      "author": {
+        "name": "Kruoop / BoomBigNose"
+      },
+      "category": "productivity",
+      "keywords": [
+        "bbn",
+        "video",
+        "thai",
+        "shorts",
+        "motion",
+        "codex"
+      ]
+    }
+  ]
+}

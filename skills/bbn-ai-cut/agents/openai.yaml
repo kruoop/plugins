@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN AI Cut"
+  short_description: "ตัดต่อ BBN พร้อม Short แอนิเมชันและตรวจไฟล์"
+  default_prompt: "ใช้ $bbn-ai-cut ตัดต่อฟุตเทจ BBN เป็นคลิปยาวพร้อม Short และข้อมูล YouTube หรือแก้ฉบับเดิมเฉพาะช่วงและสื่อที่ระบุ พร้อมฟอนต์เคลื่อนไหว ภาพที่เหมาะกับคำพูด และตรวจไฟล์จริงก่อนส่ง โดยรักษาเสียงและส่วนที่อนุมัติแล้วตามขอบเขตล่าสุด"
+policy:
+  allow_implicit_invocation: true

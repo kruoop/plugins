@@ -1,0 +1,4 @@
+interface:
+  display_name: "BoomBigNose Voice Clone"
+  short_description: "Thai voice cloning with the saved BBN profile"
+  default_prompt: "ใช้ $bbn-voice-clone สร้างเสียงภาษาไทยจากสคริปต์ด้วยโปรไฟล์เสียงล่าสุดของผม"

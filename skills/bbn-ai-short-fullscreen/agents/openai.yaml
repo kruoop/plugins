@@ -1,0 +1,4 @@
+interface:
+  display_name: "BBN AI Shorts Fullscreen"
+  short_description: "ช็อตเต็มจอ ผู้พูดวิดีโอตัดพื้นหลัง และชั้นฮุค"
+  default_prompt: "ใช้ $bbn-ai-short-fullscreen ทำคลิป Shorts นี้แบบผลงานเต็มจอ ผู้พูดเป็นวิดีโอที่ลบพื้นหลัง ชื่อฮุคกับโลโก้แยกชั้น แล้วเปลี่ยนเป็นหน้าจอสอนหรือโมชั่นตามเนื้อหา"

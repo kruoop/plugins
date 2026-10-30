@@ -1,0 +1,4 @@
+interface:
+  display_name: "BBN Tutorial Hook & Cover"
+  short_description: "ฮุคโชว์ผลงานและปกผู้สอนใหญ่ พร้อมโลโก้แอป"
+  default_prompt: "ใช้ $bbn-tutorial-hook สร้างฮุคก่อนเข้าสอนและหน้าปกแนวตั้งจากเนื้อหาคลิปนี้ ให้ผลงานอยู่บน ผู้พูดอยู่ล่าง และเลือกโลโก้กับ Name Hook ให้ตรงบทเรียน"

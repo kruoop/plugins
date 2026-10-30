@@ -1,0 +1,33 @@
+{
+ "name": "BBN clear VO (EP5 v6 approved recipe: refM, seed 42)",
+ "model": {
+  "repository": "mlx-community/OmniVoice-bf16",
+  "revision": "8fb0b754cad788aaefec690cd55c207e8a628f85",
+  "path": "models/omnivoice"
+ },
+ "personal_weight_finetuning": false,
+ "reference": "/Users/panda/.codex/skills/bbn-clear-vo/assets/refM.wav",
+ "reference_text": "ซึ่งในวันนี้นะครับ ผมก็จะอธิบายทั้งหมดเลยว่า อีอาร์พีตรงนี้นะครับ เพื่อให้ข้อมูลใหม่ใส่ได้",
+ "language": "th",
+ "settings": {
+  "steps": 32,
+  "guidance": 2.0,
+  "seed": 42,
+  "pace_factor": 0.85,
+  "pitch_semitones": -0.5,
+  "pause_phrase": 0.14,
+  "pause_sentence": 0.4,
+  "pause_topic": 0.6,
+  "pause_paragraph": 0.75,
+  "pause_scale": 1.0
+ },
+ "provenance": {
+  "reference_source": "https://www.youtube.com/watch?v=IpBhR8pjNpA",
+  "reference_seconds": [
+   54.42,
+   60.02
+  ],
+  "mlx_audio_commit": "e66ad2ff4eb96ce1149000187b30370cbcd707aa",
+  "reference_sha256": "29f81836737988567be140f585c6e12f986946f939d22c7d8362ed0fc06a34cb"
+ }
+}

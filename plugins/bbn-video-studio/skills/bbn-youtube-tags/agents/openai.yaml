@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN YouTube Tags"
+  short_description: "ค้นคีย์เวิร์ดล่าสุดและจัด Tags ไม่เกิน 500 ตัวอักษร"
+  default_prompt: "ใช้ $bbn-youtube-tags เช็กคำค้น YouTube หรือ Google Trends ล่าสุด แล้วจัด Tags ภาษาไทยและอังกฤษให้ตรงคลิปและไม่เกิน 500 ตัวอักษร"
+policy:
+  allow_implicit_invocation: true

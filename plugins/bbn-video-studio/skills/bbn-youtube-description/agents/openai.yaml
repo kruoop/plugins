@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN YouTube Description"
+  short_description: "เขียน Description พร้อม URL เต็มและ Timeline"
+  default_prompt: "ใช้ $bbn-youtube-description ทำ Package ตามต้นแบบ EP224 แบบคงรูปแบบ ใช้ลิงก์ Kruoop about?c=boombignose และ Timeline ตรงกับไฟล์ล่าสุด"
+policy:
+  allow_implicit_invocation: true

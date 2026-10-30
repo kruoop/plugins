@@ -1,0 +1,64 @@
+{episode} — ชุดเนื้อหา
+
+Title
+ตัวหลัก:
+{title_main}
+
+สำรอง 1:
+{title_alt1}
+
+สำรอง 2:
+{title_alt2}
+
+แคปชันโพสต์ long video
+ตัวหลัก:
+ฟรี! พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : {title_main}
+
+สำรอง 1:
+ฟรี! พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : {title_alt1}
+
+สำรอง 2:
+ฟรี! พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : {title_alt2}
+
+แคปชันโพสต์ short video — ใช้ข้อความเดียวกันทุกคำสำหรับ YouTube Shorts / Facebook / TikTok
+ตัวหลัก:
+{title_main}
+
+สำรอง 1:
+{title_alt1}
+
+สำรอง 2:
+{title_alt2}
+
+แคปชันโพสต์ short video IG
+ตัวหลัก:
+ฟรี✨ พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็ม {ig_main_benefit}
+
+สำรอง 1:
+ฟรี✨ พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็ม {ig_alt1_benefit}
+
+สำรอง 2:
+ฟรี✨ พิมพ์ "{keyword}" ผมส่งลิงก์วิดีโอเต็ม {ig_alt2_benefit}
+
+📝 YouTube Description
+
+🌟 เรียนรู้และติดตาม Skill บน Kruoop 👉 https://kruoop.com/about?c=boombignose
+
+💡 {summary1}
+✨ {summary2}
+🌐 {summary3}
+
+{disclaimer_block}💎 ลิงก์สำคัญ
+
+{resource_lines}
+
+👨‍💼 ติดต่องาน / Workshop องค์กร
+✉️ contact@boombignose.org
+📱 https://lin.ee/SJ1m7ix
+
+⏰ Timeline
+{timeline}
+
+
+Tags
+{tags}

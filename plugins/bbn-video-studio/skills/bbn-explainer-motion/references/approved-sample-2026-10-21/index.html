@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<title>BBN Long motion style sample</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: "NotoThai"; src: url("assets/NotoSansThai-ExtraBold.ttf"); font-weight: 800; }
+  @font-face { font-family: "PlexThai"; src: url("assets/IBMPlexSansThai-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "Emo"; src: local("Apple Color Emoji"); }
+  body { margin: 0; background: #E8E6E2; }
+  #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #E8E6E2; font-family: "PlexThai", sans-serif; color: #111; }
+  #stage { position: absolute; left: 72px; top: 64px; width: 1500px; height: 952px; background: #fff; border-radius: 40px; box-shadow: 0 24px 60px rgba(0,0,0,.10); overflow: hidden; }
+  .scene { position: absolute; inset: 0; }
+  .h { position: absolute; left: 0; right: 0; text-align: center; font-family: "NotoThai"; font-weight: 800; font-size: 104px; line-height: 1.2; }
+  .acc { color: #D83A17; }
+  .emo { font-family: "Emo", sans-serif; line-height: 1; display: block; }
+  .slot { position: absolute; width: 380px; height: 420px; border-radius: 40px; border: 6px dashed #D6D2CB; box-sizing: border-box; }
+  .tile { position: absolute; inset: -6px; border-radius: 40px; background: #F7F5F1; box-shadow: 0 14px 34px rgba(0,0,0,.10); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+  .tile .emo { font-size: 220px; }
+  .lbl { font-size: 60px; font-weight: 700; white-space: nowrap; }
+  .pill { position: absolute; padding: 18px 40px; border-radius: 999px; font-size: 54px; font-weight: 700; white-space: nowrap; }
+  .card { position: absolute; background: #F7F5F1; border-radius: 36px; box-shadow: 0 12px 30px rgba(0,0,0,.10); display: flex; align-items: center; gap: 26px; padding: 0 40px; box-sizing: border-box; }
+  .logo { width: 150px; height: 150px; border-radius: 34px; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,.12); display: flex; align-items: center; justify-content: center; }
+  .logo img { width: 112px; height: 112px; object-fit: contain; }
+  .seg { position: absolute; top: 640px; width: 92px; height: 92px; border-radius: 22px; background: #ECE9E4; }
+  .segf { position: absolute; inset: 0; border-radius: 22px; background: #D83A17; transform-origin: 0 50%; }
+  #presenter { position: absolute; left: 1624px; top: 576px; width: 272px; height: 440px; border-radius: 32px; overflow: hidden; background: #cfc9c0; box-shadow: 0 14px 36px rgba(0,0,0,.18); }
+  #presenter img { width: 100%; height: 100%; object-fit: cover; object-position: 74% 20%; }
+  #cursor { position: absolute; left: 0; top: 0; width: 64px; height: 64px; }
+  .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 8px solid #D83A17; box-sizing: border-box; opacity: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="10" data-fps="30">
+  <div id="stage">
+    <!-- Scene 1: slot fill + cursor -->
+    <div id="s1" class="scene">
+      <div id="s1h" class="h" style="top:70px">ให้ <span class="acc">AI</span> ช่วยตัดคลิป</div>
+      <div class="slot" style="left:110px;top:340px"><div id="t1" class="tile"><span class="emo e">🎬</span><div class="lbl">ถ่ายคลิป</div></div></div>
+      <div class="slot" style="left:560px;top:340px"><div id="t2" class="tile"><span class="emo e">🎙️</span><div class="lbl">ถอดเสียง</div></div></div>
+      <div class="slot" style="left:1010px;top:340px"><div id="t3" class="tile"><span class="emo e">✂️</span><div class="lbl">ตัดต่อ</div></div></div>
+    </div>
+    <!-- Scene 2: branch choose -->
+    <div id="s2" class="scene" style="opacity:0">
+      <div class="h" style="top:56px">เลือกทางไหนดี<span class="acc">?</span></div>
+      <svg width="1500" height="952" style="position:absolute;left:0;top:0">
+        <path id="pa" d="M 350 560 L 590 560" stroke="#111" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path id="pb" d="M 820 560 C 900 560 900 330 980 330" stroke="#C9C4BC" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path id="pc" d="M 820 560 C 900 560 900 740 1030 740" stroke="#D83A17" stroke-width="12" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div id="raw" class="card" style="left:60px;top:390px;width:290px;height:340px;flex-direction:column;justify-content:center;gap:14px;padding:0"><span class="emo e" style="font-size:160px">📹</span><div class="lbl">คลิปดิบ</div></div>
+      <div id="ask" class="pill" style="left:590px;top:520px;background:#111;color:#fff;font-size:46px;padding:14px 32px">ทางไหน?</div>
+      <div id="bad" class="card" style="left:980px;top:245px;width:480px;height:170px;gap:20px;padding:0 30px"><span class="emo e" style="font-size:116px">😩</span><div class="lbl" style="font-size:54px">ตัดเองทั้งวัน</div></div>
+      <div id="good" class="card" style="left:1030px;top:640px;width:400px;height:200px;flex-direction:column;justify-content:center;gap:14px;padding:0">
+        <div style="display:flex;gap:22px"><div class="logo"><img src="assets/claudecode.png"></div><div class="logo"><img src="assets/codex.png"></div></div>
+      </div>
+      <div id="goodl" class="pill" style="left:1060px;top:858px;background:#D83A17;color:#fff;font-size:48px;padding:10px 34px">ให้ AI ช่วย</div>
+    </div>
+    <!-- Scene 3: progress + payoff -->
+    <div id="s3" class="scene" style="opacity:0">
+      <div class="h" style="top:70px">ส่งงานได้<span class="acc">ไวขึ้น</span></div>
+      <span id="bot" class="emo" style="position:absolute;left:150px;top:300px;font-size:300px">🤖</span>
+      <div id="segs"></div>
+      <div id="done" class="card" style="left:560px;top:290px;width:820px;height:240px;justify-content:center;background:#FFF1EC;border:6px solid #D83A17"><span class="emo e" style="font-size:170px">🚀</span><div class="lbl" style="font-size:76px">พร้อมอัปโหลด</div></div>
+      <span id="sp1" class="emo" style="position:absolute;left:1300px;top:230px;font-size:110px">✨</span>
+      <span id="sp2" class="emo" style="position:absolute;left:520px;top:520px;font-size:96px">🎉</span>
+    </div>
+  </div>
+  <div id="presenter"><img src="assets/face.png" /></div>
+  <div id="ring" class="ring"></div>
+  <svg id="cursor" viewBox="0 0 32 32"><path d="M4 2 L4 26 L10 20 L14 30 L18 28 L14 18 L23 18 Z" fill="#111" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+</div>
+<script>
+  window.__timelines = window.__timelines || {};
+  // progress segments (deterministic DOM, built once)
+  const segs = document.getElementById("segs");
+  for (let i = 0; i < 8; i++) segs.insertAdjacentHTML("beforeend", `<div class="seg" style="left:${560 + i * 104}px"><div id="f${i}" class="segf"></div></div>`);
+
+  const tl = gsap.timeline({ paused: true });
+  const pop = (s, t) => tl.fromTo(s, { opacity: 0, scale: 0.55, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.42, ease: "back.out(2.2)" }, t);
+  const idle = (s, t, d) => tl.to(s, { y: -12, scale: 1.03, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(d / 0.6) | 1) }, t);
+  const click = (x, y, t) => {
+    tl.to("#cursor", { x, y, duration: 0.45, ease: "power3.inOut" }, t);
+    tl.set("#ring", { x: x + 8, y: y + 8, opacity: 1, scale: 0.3 }, t + 0.45);
+    tl.to("#ring", { opacity: 0, scale: 1.4, duration: 0.45, ease: "power2.out" }, t + 0.45);
+  };
+
+  // Scene 1 (0–3.6s)
+  tl.set("#cursor", { x: 1500, y: 980, opacity: 1 }, 0);
+  tl.fromTo("#s1h", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.1);
+  pop("#t1", 0.55); pop("#t2", 0.95); pop("#t3", 1.35);
+  idle("#t1 .e", 1.0, 2.4); idle("#t2 .e", 1.4, 2.0); idle("#t3 .e", 1.8, 1.6);
+  click(372, 660, 1.75); tl.to("#t1", { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 }, 2.2);
+  click(822, 660, 2.35); tl.to("#t2", { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 }, 2.8);
+  click(1272, 660, 2.95); tl.to("#t3", { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 }, 3.4);
+  // blur handoff
+  tl.to("#s1", { opacity: 0, filter: "blur(14px)", scale: 0.96, duration: 0.45, ease: "power2.in" }, 3.55);
+  tl.to("#stage", { scale: 0.985, duration: 0.25, yoyo: true, repeat: 1, ease: "power1.inOut" }, 3.55);
+
+  // Scene 2 (3.9–6.9s)
+  tl.fromTo("#s2", { opacity: 0, filter: "blur(14px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power2.out" }, 3.9);
+  pop("#raw", 4.05);
+  const dash = (s, len, t, d) => tl.fromTo(s, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: d, ease: "power2.inOut" }, t);
+  dash("#pa", 240, 4.35, 0.35);
+  pop("#ask", 4.65);
+  dash("#pb", 300, 4.9, 0.4); pop("#bad", 5.15);
+  click(1260, 400, 5.2);
+  tl.to("#bad", { opacity: 0.35, scale: 0.94, duration: 0.3 }, 5.7);
+  tl.to("#pb", { opacity: 0.35, duration: 0.3 }, 5.7);
+  dash("#pc", 300, 5.75, 0.45); pop("#good", 6.0); pop("#goodl", 6.2);
+  click(1220, 750, 6.05);
+  idle("#good .logo", 6.4, 0.8);
+  tl.to("#s2", { opacity: 0, filter: "blur(14px)", scale: 0.96, duration: 0.4, ease: "power2.in" }, 6.85);
+
+  // Scene 3 (7.2–10s)
+  tl.to("#cursor", { opacity: 0, duration: 0.2 }, 6.9);
+  tl.fromTo("#s3", { opacity: 0, filter: "blur(14px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power2.out" }, 7.2);
+  pop("#bot", 7.3);
+  idle("#bot", 7.75, 2.2);
+  for (let i = 0; i < 8; i++) {
+    tl.fromTo(`#f${i}`,{ scaleX: 0 }, { scaleX: 1, duration: 0.12, ease: "power1.out" }, 7.55 + i * 0.13);
+    tl.fromTo(`#segs .seg:nth-child(${i + 1})`, { scale: 1 }, { scale: 1.1, duration: 0.08, yoyo: true, repeat: 1 }, 7.55 + i * 0.13);
+  }
+  tl.fromTo("#done", { opacity: 0, scale: 0.5, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "back.out(2.4)" }, 8.75);
+  tl.to("#segs", { opacity: 0, duration: 0.25 }, 8.7);
+  pop("#sp1", 9.0); pop("#sp2", 9.12);
+  tl.to("#sp1", { rotation: 18, y: -16, duration: 0.4, yoyo: true, repeat: 1, ease: "sine.inOut" }, 9.3);
+  tl.to("#sp2", { rotation: -14, y: -12, duration: 0.4, yoyo: true, repeat: 1, ease: "sine.inOut" }, 9.3);
+  tl.to("#done", { scale: 1.03, duration: 0.35, yoyo: true, repeat: 1, ease: "sine.inOut" }, 9.25);
+  tl.set({}, {}, 10);
+  window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

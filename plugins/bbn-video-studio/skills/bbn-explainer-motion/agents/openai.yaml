@@ -1,0 +1,4 @@
+interface:
+  display_name: "BBN Explainer Motion"
+  short_description: "โมชั่นและป็อปอัพประกอบเรื่องราวให้ตรงเสียงพูด"
+  default_prompt: "ใช้ $bbn-explainer-motion สร้างโมชั่นกราฟิกและป็อปอัพที่เกี่ยวข้องกับคำพูดในช่วงอธิบายของคลิปนี้ แล้ววางให้ตรงเสียงในไทม์ไลน์"

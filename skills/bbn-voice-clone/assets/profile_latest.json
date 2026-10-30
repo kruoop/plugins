@@ -1,0 +1,52 @@
+{
+ "name": "BoomBigNose latest approved voice (EP9 VO v1, approved 2026-10-16)",
+ "model": {
+  "repository": "mlx-community/OmniVoice-bf16",
+  "revision": "8fb0b754cad788aaefec690cd55c207e8a628f85",
+  "path": "models/boombignose-finetuned"
+ },
+ "personal_weight_finetuning": false,
+ "reference": "refM.wav",
+ "reference_text": "ซึ่งในวันนี้นะครับ ผมก็จะอธิบายทั้งหมดเลยว่า อีอาร์พีตรงนี้นะครับ เพื่อให้ข้อมูลใหม่ใส่ได้",
+ "language": "th",
+ "settings": {
+  "steps": 32,
+  "guidance": 2.0,
+  "seed": 42,
+  "pace_factor": 1.0,
+  "pitch_semitones": -0.5,
+  "pause_phrase": 0.14,
+  "pause_sentence": 0.4,
+  "pause_topic": 0.6,
+  "pause_paragraph": 0.75,
+  "pause_scale": 1.0
+ },
+ "provenance": {
+  "reference_source": "https://www.youtube.com/watch?v=IpBhR8pjNpA",
+  "reference_seconds": [
+   54.42,
+   60.02
+  ],
+  "mlx_audio_commit": "e66ad2ff4eb96ce1149000187b30370cbcd707aa",
+  "reference_sha256": "0a5df0347e766cac54d6254e1cc53642f8a72a0dc59f3e2c4010e0d136c33002",
+  "reference_note": "refM = kit reference.wav + an expressive raw (pitch 0) tail, total 7.98 s (EP2 v8 mixed reference, used for EP5-EP9)"
+ },
+ "approved": {
+  "episode": "EP9",
+  "file": "assets/latest-approved_EP9.m4a",
+  "script": "assets/latest-approved_EP9_script.txt",
+  "date": "2026-10-16",
+  "finish": {
+   "tempo": 1.16,
+   "line_gap_s": 0.12,
+   "section_gap_s": 0.26,
+   "item_beat_s": 0.3,
+   "lead_s": 0.15,
+   "tail_s": 0.6,
+   "inner_pause_max_s": 0.4,
+   "inner_pause_to_s": 0.28,
+   "cleanup": "edges, inhales, debreath, unvoiced islands, voiced blips (เออ), room tone -66 dBFS",
+   "tool": "~/.codex/skills/bbn-clear-vo/scripts/assemble.py"
+  }
+ }
+}

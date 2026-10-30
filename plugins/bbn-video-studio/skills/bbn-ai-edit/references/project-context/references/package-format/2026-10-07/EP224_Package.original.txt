@@ -1,0 +1,80 @@
+EP224 — ชุดเนื้อหา
+
+Title
+ตัวหลัก:
+Hermes AI Agent สร้างทีมบอท 6 ตัว ทำเกม 3D พร้อมเชื่อม Desktop กับ VPS
+
+สำรอง 1:
+สอน Hermes Desktop สร้างทีม AI ทำแอปเกม และติดตั้งบน Hostinger VPS
+
+สำรอง 2:
+สร้างแอป Desktop ด้วย Hermes AI Agent ตั้งแต่ทีมบอทจนเชื่อม VPS
+
+แคปชันโพสต์ long video
+ตัวหลัก:
+ฟรี! พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : Hermes AI Agent สร้างทีมบอท 6 ตัว ทำเกม 3D พร้อมเชื่อม Desktop กับ VPS
+
+สำรอง 1:
+ฟรี! พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : สอน Hermes Desktop สร้างทีม AI ทำแอปเกม และติดตั้งบน Hostinger VPS
+
+สำรอง 2:
+ฟรี! พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็มให้ครับ ☺️ : สร้างแอป Desktop ด้วย Hermes AI Agent ตั้งแต่ทีมบอทจนเชื่อม VPS
+
+แคปชันโพสต์ short video — ใช้ข้อความเดียวกันทุกคำสำหรับ YouTube Shorts / Facebook / TikTok
+ตัวหลัก:
+Hermes AI Agent สร้างทีมบอท 6 ตัว ทำเกม 3D พร้อมเชื่อม Desktop กับ VPS
+
+สำรอง 1:
+สอน Hermes Desktop สร้างทีม AI ทำแอปเกม และติดตั้งบน Hostinger VPS
+
+สำรอง 2:
+สร้างแอป Desktop ด้วย Hermes AI Agent ตั้งแต่ทีมบอทจนเชื่อม VPS
+
+แคปชันโพสต์ short video IG
+ตัวหลัก:
+ฟรี✨ พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็ม สอนสร้างทีมบอท ทำเกม 3D และเชื่อม Desktop กับ VPS ให้ครับ ☺️
+
+สำรอง 1:
+ฟรี✨ พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็ม สอนใช้ Hermes Desktop และติดตั้งบน Hostinger VPS ให้ครับ ☺️
+
+สำรอง 2:
+ฟรี✨ พิมพ์ "Hermes" ผมส่งลิงก์วิดีโอเต็ม สร้างแอป Desktop ด้วยทีม AI พร้อมขั้นตอนตั้งค่าให้ครับ ☺️
+
+📝 YouTube Description
+
+📍 Workshop n8n × Hostinger 👉 https://boombignose.org/n8n-free/
+
+🌟 เรียนรู้และติดตาม Skill บน Skool BoomBigNose+ 👉 https://www.skool.com/boombignose/about
+
+☺️ เริ่มต้นใช้งาน Hostinger VPS ได้ที่ https://hostinger.com/boombignose ใช้โค้ด BOOMBIGNOSE สำหรับส่วนลดครับ!
+
+💡 สร้างทีมบอท 6 ตัวบน Hermes AI Agent พร้อมภาพประจำบอท
+✨ ทดลองสร้างเกม 3D เป็นแอป Desktop และคุยกับทีมผ่าน Group Chat
+🌐 ติดตั้ง Hermes บน Hostinger VPS แล้วเชื่อมผ่าน Remote Gateway
+
+💎 ลิงก์สำคัญ
+
+- Hermes Agent — https://hermes-agent.nousresearch.com/
+- Hermes Desktop — https://hermes-agent.nousresearch.com/docs/user-guide/desktop/
+- โค้ดและเอกสาร Hermes Agent — https://github.com/NousResearch/hermes-agent
+- Bot Mode — https://hermes-agent.nousresearch.com/docs/user-guide/bot-mode/
+
+👨‍💼 ติดต่องาน / Workshop องค์กร
+✉️ contact@boombignose.org
+📱 https://lin.ee/SJ1m7ix
+
+⏰ Timeline
+0:00 ดูเกม 3D ที่สร้างได้และรู้จัก Hermes Desktop
+0:51 เชื่อมโมเดล Codex และดู Local Models
+2:09 สร้าง Project และจัดการ Session
+3:36 ตั้งค่า Image Generation ด้วย Codex
+4:07 สั่งสร้างทีมบอทและใช้งาน Voice
+6:23 เลือก VPS และติดตั้ง Hermes บน Hostinger
+8:57 Workshop n8n × Hostinger
+9:57 ดูทีมบอท สร้างเกม และทดลอง Group Chat
+12:44 เชื่อม Remote Gateway และตั้งค่าโมเดลบน VPS
+15:07 แยกบอท Local กับ VPS และทดสอบการใช้งาน
+
+
+Tags
+Hermes AI Agent,Hermes Agent,Hermes Desktop,สอน Hermes,Hermes AI ภาษาไทย,ติดตั้ง Hermes,Hermes Agent setup,Hermes tutorial,AI Agent,สร้างทีม AI,Multi Agent,AI สร้างเกม,สร้างเกม 3D,สร้างแอปด้วย AI,Desktop App,Python,Group Chat,Bot Mode,Remote Gateway,Hostinger VPS,ติดตั้ง AI บน VPS,Hostinger Docker Manager,Codex,ChatGPT Codex,Local Models,Vibe Coding,AI coding,สอน AI Agent,เชื่อม VPS,ทีมบอท,สร้างบอท,Hermes VPS,สร้างเกมด้วย Python,n8n

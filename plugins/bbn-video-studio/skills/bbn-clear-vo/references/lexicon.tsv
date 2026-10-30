@@ -1,0 +1,33 @@
+# regex<TAB>TTS spelling<TAB>why (applied to the TTS text only; captions keep the user's words). Proven on EP4/EP5, 2026-10.
+ไวบ์โค้ด	ไวบ์บโค้ด	"ไวบ์" alone is read "ไว้"
+โควตา	โคต้า	user wants it said โคต้า; โควตา came out unclear
+โปรไฟล์	โปรไฟว	2026-10-26 Hermes clip: โปรไฟล/โปรไฟล์ read "โปรฟาล"; โปรไฟว heard as Profile (must stay above the ไฟล์ rules)
+เฮอร์มีส	เฮอร์เมส	2026-10-26: user wants Hermes said เฮอร์เมส; heard as Hermes
+เดสก์ท็อป	เดสท็อป	2026-10-26 (final): owner picked เดสท็อป + scripts/soften_word.py (0.08 s soft tail on the top vowel); ทอบ too soft, plain ท็อป too hard, เดสก์ท่อป/ท้อป/ท้อบ rejected
+เอดิท	อีดิท	2026-10-26: Edit said อีดิท (BBN AI Edit), not เอดิท
+เหตุผล	เหดผล	2026-10-26: user wants เหต-ผล, not เห-ตุ-ผล; spelling without ุ removes the split syllable
+ไฟล์(?=[ก-๙])	ไฟล 	ไฟล์/ไฟน์ lose the final ล ("ไฟ"); "ทุกไฟล ใหม่" keeps it
+ไฟล์	ไฟล	same, at the end of a phrase
+ครอด	คล็อด	Claude: ครอด has an r the user hears as unclear
+ด้วยคล็อด ?โค้ด	ด้วยตัวคล็อดโค้ด	Claude Code at the end of a phrase blurs; "ตัว" in front made it "Claude Code"
+เอเจนต์ สกิลส์	เอเจนต์สกิล	final -ลส์ read "สกิวส"
+แอดดี(?!้)	แอ๊ดดี้	Addy Osmani (EP5) — names need the tone mark the English stress implies
+อาร์กอน	อาร์ก้อน	Argon (EP6): mid-tone spelling came out "อาก่อน"/"อากร"
+เจมิไน สี่	เจมิไนสี่	EP6: spaced "สี่" heard as the letter C
+สุดๆ	สุดสุด	EP6: ๆ read as "ตี"
+ชื่อพิป	ชื่อ พิพ	EP6: Pip lost its final stop ("พิด")
+แชตจีพีที	แช็ตจีพีที	EP7: แชต heard as "ชัด"
+ใกล้ๆ	ใกล้ใกล้	EP8: ๆ read as "ตี" (same as สุดๆ)
+ชัดๆ	ชัดชัด	EP8: same
+รอบๆ	รอบรอบ	EP8: same
+พร็อมต์	พร๊อม	EP8: user wants prompt said "พร๊อม" (high tone, no final t); Latin "Prompt" gave an English-style t the user rejected
+(?<=คำว่า )Ads(?= )	Ads,	EP8: comment keyword Ads — Latin + comma reads "Ads" (Thai spellings came out "as y"/"เอเซว"; no comma → "Ad")
+โฆษณา	โฆ สะ นา	EP8: user wants it said โฆ-สะ-นา (โคดสะนา rejected — heard a d); spaced syllables read exactly; after ก็ทำ use "โค สะ นา" (โฆ spaced came out สะหน้า there)
+จริงๆ	จริงจริง	EP9: same as สุดๆ (ๆ read as "ตี")
+สั่ง ?คล็อด ?โค้ด	สั่งตัวคล๊อตโค้ด	EP9 (approved VO v1, p02_b): "ผมสั่งตัวคล๊อตโค้ด" — "ตัว" in front keeps Claude Code clear after a verb (same idea as ด้วยตัว…)
+คล็อด	คล๊อต	EP7 v4: the user asked for Claude read "คล๊อต" / "คล๊อตโค้ด" (2026-10-16); "มีตัวคล๊อตโค้ด" read cleaner than "มีคล๊อตโค้ด". Whisper writes it คลอส/คลอต/Cloth — judge by the user, not Whisper
+(?i)n8n|เอ็นเอ้ดเอ็น|เอ็น เอ๊ดเอ็น	เอ็นเอทเอ็น	2026-10-27: owner picked เอ็นเอทเอ็น (one word) after hearing the Short; เอ็น เอ๊ดเอ็น sounded like "เอ็น เอส เอ็น"; not chosen: เอ็น เอท เอ็น, เอ็น เอ็ด เอ็น, เอ็น แปด เอ็น
+(?i)windows|วินโดวส์|วินโดว์	วินโด้	2026-10-27 n8n 101: owner wants Windows said วิน-โด้
+(?i)localhost|โลคอลโฮสต์|โลคอล โฮสต์	โลข้อล โฮสต์	2026-10-27 n8n 101: owner wants local said โล-ข้อล (localhost = โลข้อล โฮสต์)
+(?i)local|โลคอล	โลข้อล	2026-10-27 n8n 101: owner wants local said โล-ข้อล
+(?i)skip|สกิป	สะคิป	2026-10-27 n8n 101: owner wants Skip said สะ-คิป

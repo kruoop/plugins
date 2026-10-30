@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN YouTube Thumbnail"
+  short_description: "สร้างปก YouTube จากภาพจริงและโลโก้ที่เลือก"
+  default_prompt: "ใช้ $bbn-youtube-thumbnail สร้างปกใหม่จากหัวข้อ รูปบุคคล และโลโก้ที่ฉันให้ ในสไตล์มืดขาวเหลือง พร้อมแบบมีและไม่มีรูปพิธีกร"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN YouTube Title"
+  short_description: "ตั้งชื่อคลิป BBN ให้น่าคลิกและตรงเนื้อหา"
+  default_prompt: "ใช้ $bbn-youtube-title เขียนชื่อ YouTube ภาษาไทยให้คลิปนี้น่าคลิกและตรงเนื้อหา โดยรักษาคำที่ผมเลือกไว้"
+policy:
+  allow_implicit_invocation: true

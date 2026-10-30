@@ -1,0 +1,6 @@
+interface:
+  display_name: "BBN AI Edit"
+  short_description: "Long ใช้ V2; Short, Package, ปกและ Skool ใช้ flow เดิม"
+  default_prompt: "ใช้ $bbn-ai-edit ทำ EP นี้ให้ครบ โดยใช้ bbn-ai-edit-v2 เฉพาะ Long ส่วน Short, แพ็กเกจ YouTube และ Thumbnail ใช้ flow เดิม และทำ Skool เมื่อขอ พร้อมตรวจไฟล์ก่อนส่ง"
+policy:
+  allow_implicit_invocation: true
