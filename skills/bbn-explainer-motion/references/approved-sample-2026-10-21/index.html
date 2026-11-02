@@ -6,19 +6,20 @@
 <title>BBN Long motion style sample</title>
 <script src="assets/gsap.min.js"></script>
 <style>
-  @font-face { font-family: "NotoThai"; src: url("assets/NotoSansThai-ExtraBold.ttf"); font-weight: 800; }
-  @font-face { font-family: "PlexThai"; src: url("assets/IBMPlexSansThai-Bold.ttf"); font-weight: 700; }
-  @font-face { font-family: "Emo"; src: local("Apple Color Emoji"); }
+  /* KAN-76: bundled Thai fonts only (block = no fallback flash); no system emoji font */
+  @font-face { font-family: "NotoThai"; src: url("assets/NotoSansThai-ExtraBold.ttf") format("truetype"); font-weight: 800; font-display: block; }
+  @font-face { font-family: "PlexThai"; src: url("assets/IBMPlexSansThai-Bold.ttf") format("truetype"); font-weight: 700; font-display: block; }
   body { margin: 0; background: #E8E6E2; }
-  #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #E8E6E2; font-family: "PlexThai", sans-serif; color: #111; }
+  #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #E8E6E2; font-family: "PlexThai", "NotoThai", sans-serif; color: #111; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
   #stage { position: absolute; left: 72px; top: 64px; width: 1500px; height: 952px; background: #fff; border-radius: 40px; box-shadow: 0 24px 60px rgba(0,0,0,.10); overflow: hidden; }
   .scene { position: absolute; inset: 0; }
-  .h { position: absolute; left: 0; right: 0; text-align: center; font-family: "NotoThai"; font-weight: 800; font-size: 104px; line-height: 1.2; }
+  .h { position: absolute; left: 0; right: 0; text-align: center; font-family: "NotoThai", "PlexThai", sans-serif; font-weight: 800; font-size: 104px; line-height: 1.2; }
   .acc { color: #D83A17; }
-  .emo { font-family: "Emo", sans-serif; line-height: 1; display: block; }
+  /* KAN-76: no emoji anywhere; icons = drawn SVG in assets/icons/ (vector, sharp at any size), brands = real logos */
+  .ico { display: block; object-fit: contain; flex: none; }
   .slot { position: absolute; width: 380px; height: 420px; border-radius: 40px; border: 6px dashed #D6D2CB; box-sizing: border-box; }
   .tile { position: absolute; inset: -6px; border-radius: 40px; background: #F7F5F1; box-shadow: 0 14px 34px rgba(0,0,0,.10); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
-  .tile .emo { font-size: 220px; }
+  .tile .ico { width: 220px; height: 220px; }
   .lbl { font-size: 60px; font-weight: 700; white-space: nowrap; }
   .pill { position: absolute; padding: 18px 40px; border-radius: 999px; font-size: 54px; font-weight: 700; white-space: nowrap; }
   .card { position: absolute; background: #F7F5F1; border-radius: 36px; box-shadow: 0 12px 30px rgba(0,0,0,.10); display: flex; align-items: center; gap: 26px; padding: 0 40px; box-sizing: border-box; }
@@ -38,9 +39,9 @@
     <!-- Scene 1: slot fill + cursor -->
     <div id="s1" class="scene">
       <div id="s1h" class="h" style="top:70px">ให้ <span class="acc">AI</span> ช่วยตัดคลิป</div>
-      <div class="slot" style="left:110px;top:340px"><div id="t1" class="tile"><span class="emo e">🎬</span><div class="lbl">ถ่ายคลิป</div></div></div>
-      <div class="slot" style="left:560px;top:340px"><div id="t2" class="tile"><span class="emo e">🎙️</span><div class="lbl">ถอดเสียง</div></div></div>
-      <div class="slot" style="left:1010px;top:340px"><div id="t3" class="tile"><span class="emo e">✂️</span><div class="lbl">ตัดต่อ</div></div></div>
+      <div class="slot" style="left:110px;top:340px"><div id="t1" class="tile"><img class="ico e" src="assets/icons/camera.svg" alt=""><div class="lbl">ถ่ายคลิป</div></div></div>
+      <div class="slot" style="left:560px;top:340px"><div id="t2" class="tile"><img class="ico e" src="assets/icons/mic.svg" alt=""><div class="lbl">ถอดเสียง</div></div></div>
+      <div class="slot" style="left:1010px;top:340px"><div id="t3" class="tile"><img class="ico e" src="assets/icons/timeline.svg" alt=""><div class="lbl">ตัดต่อ</div></div></div>
     </div>
     <!-- Scene 2: branch choose -->
     <div id="s2" class="scene" style="opacity:0">
@@ -50,9 +51,9 @@
         <path id="pb" d="M 820 560 C 900 560 900 330 980 330" stroke="#C9C4BC" stroke-width="10" fill="none" stroke-linecap="round"/>
         <path id="pc" d="M 820 560 C 900 560 900 740 1030 740" stroke="#D83A17" stroke-width="12" fill="none" stroke-linecap="round"/>
       </svg>
-      <div id="raw" class="card" style="left:60px;top:390px;width:290px;height:340px;flex-direction:column;justify-content:center;gap:14px;padding:0"><span class="emo e" style="font-size:160px">📹</span><div class="lbl">คลิปดิบ</div></div>
+      <div id="raw" class="card" style="left:60px;top:390px;width:290px;height:340px;flex-direction:column;justify-content:center;gap:14px;padding:0"><img class="ico e" style="width:170px;height:170px" src="assets/icons/film.svg" alt=""><div class="lbl">คลิปดิบ</div></div>
       <div id="ask" class="pill" style="left:590px;top:520px;background:#111;color:#fff;font-size:46px;padding:14px 32px">ทางไหน?</div>
-      <div id="bad" class="card" style="left:980px;top:245px;width:480px;height:170px;gap:20px;padding:0 30px"><span class="emo e" style="font-size:116px">😩</span><div class="lbl" style="font-size:54px">ตัดเองทั้งวัน</div></div>
+      <div id="bad" class="card" style="left:980px;top:245px;width:480px;height:170px;gap:20px;padding:0 30px"><img class="ico e" style="width:120px;height:120px" src="assets/icons/clock.svg" alt=""><div class="lbl" style="font-size:54px">ตัดเองทั้งวัน</div></div>
       <div id="good" class="card" style="left:1030px;top:640px;width:400px;height:200px;flex-direction:column;justify-content:center;gap:14px;padding:0">
         <div style="display:flex;gap:22px"><div class="logo"><img src="assets/claudecode.png"></div><div class="logo"><img src="assets/codex.png"></div></div>
       </div>
@@ -61,11 +62,11 @@
     <!-- Scene 3: progress + payoff -->
     <div id="s3" class="scene" style="opacity:0">
       <div class="h" style="top:70px">ส่งงานได้<span class="acc">ไวขึ้น</span></div>
-      <span id="bot" class="emo" style="position:absolute;left:150px;top:300px;font-size:300px">🤖</span>
+      <img id="bot" class="ico" style="position:absolute;left:130px;top:290px;width:300px;height:300px" src="assets/icons/robot.svg" alt="">
       <div id="segs"></div>
-      <div id="done" class="card" style="left:560px;top:290px;width:820px;height:240px;justify-content:center;background:#FFF1EC;border:6px solid #D83A17"><span class="emo e" style="font-size:170px">🚀</span><div class="lbl" style="font-size:76px">พร้อมอัปโหลด</div></div>
-      <span id="sp1" class="emo" style="position:absolute;left:1300px;top:230px;font-size:110px">✨</span>
-      <span id="sp2" class="emo" style="position:absolute;left:520px;top:520px;font-size:96px">🎉</span>
+      <div id="done" class="card" style="left:560px;top:290px;width:820px;height:240px;justify-content:center;background:#FFF1EC;border:6px solid #D83A17"><img class="ico e" style="width:160px;height:160px" src="assets/icons/upload.svg" alt=""><div class="lbl" style="font-size:76px">พร้อมอัปโหลด</div></div>
+      <img id="sp1" class="ico" style="position:absolute;left:1300px;top:220px;width:120px;height:120px" src="assets/icons/sparkle.svg" alt="">
+      <img id="sp2" class="ico" style="position:absolute;left:515px;top:515px;width:106px;height:106px" src="assets/icons/confetti.svg" alt="">
     </div>
   </div>
   <div id="presenter"><img src="assets/face.png" /></div>
