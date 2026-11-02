@@ -74,7 +74,7 @@ transcript กับช่วงประโยคใช้กำหนดร่
 
 ใช้ HTML/CSS/SVG สำหรับการ์ด เส้น และตัวอักษร กับ GSAP paused/registered timeline เมื่อใช้ HyperFrames ทำตาม duration/track contract ของเครื่องมือ ใช้ฟอนต์/asset ที่ตรวจแล้วและ timeline ที่ seek ได้ จำนวนรอบจำกัดตามฉาก ไม่มี setTimeout, Date.now, Math.random หรือ infinite repeat เป็นตัวขับการเคลื่อน
 
-- **ฉากเต็ม:** MP4 พร้อมพื้นหลัง FPS/resolution ตรงคลิป ไม่มีเสียงเมื่อใช้เสียงคลิปเดิม
+- **ฉากเต็ม:** MP4 พร้อมพื้นหลัง FPS/resolution ตรงคลิป ไม่มีเสียงเมื่อใช้เสียงคลิปเดิม เรนเดอร์ด้วย `scripts/render_sharp.sh` (supersample 2 เท่า → Lanczos → x264 CRF10 BT.709) ไม่ใช้ค่าเริ่มต้นของ `hyperframes render`
 - **วางทับภาพ:** format ที่มี alpha จริง เช่น ProRes 4444 MOV หรือ PNG sequence ตามที่ compositor รองรับ ตรวจ renderer/encoder ก่อนเลือก format ชื่อ MOV หรือ pix_fmt เพียงอย่างเดียวไม่พิสูจน์ alpha
 - **แก้ไขต่อ:** composition source, assets ที่ใช้, ฟอนต์หรือข้อมูลอ้างอิงตามสิทธิ์ใช้งาน และ cue manifest ในโฟลเดอร์งานเดิม
 
@@ -86,7 +86,7 @@ transcript กับช่วงประโยคใช้กำหนดร่
 
 1. ตรวจ hero frame ก่อนโมชั่น: ป้ายไม่ซ้อน ซับ/ใบหน้า/UI มีพื้นที่ อ่านสระและวรรณยุกต์ครบ
 2. ดู entrance, 25/50/75% ของทาง, ถึงปลายทาง, hold, กลาง transition และเฟรมติดรอยต่อ เส้นกับการ์ดตรงกัน ผลตรงคำพูด ป็อปอัพใช้ภาพตรงกับสิ่งที่พูดและเข้าตรงคำ UI build เพิ่ม component ตามลำดับคำจริง ไม่มีชิ้นที่ต้องเพิ่มแต่ปรากฏครบตั้งแต่ต้น
-3. ใช้ lint/validate/inspect ที่ HyperFrames เวอร์ชันติดตั้งรองรับ แล้วตรวจภาพ encode ด้วย การผ่าน layout check ไม่แทนการดูโมชั่นกับเสียง
+3. รัน `scripts/check_motion_html.py` ให้ได้ `OK` (ไม่มีอีโมจิทุกแบบ ทั้งตัวอักษร ฟอนต์ และไฟล์ภาพ asset และฟอนต์ครบ) แล้วใช้ lint/validate/inspect ที่ HyperFrames เวอร์ชันติดตั้งรองรับ แล้วตรวจภาพ encode ด้วย การผ่าน layout check ไม่แทนการดูโมชั่นกับเสียง
 4. ตรวจ dimensions, FPS, decoded frame count และ duration เทียบ manifest พร้อม full decode ของ segment ถ้ามี alpha ทดลอง composite เหนือพื้นดำและขาว
 5. ดู preview จาก export ที่ประกอบแล้วพร้อมเสียงเดิม คำยึดจังหวะตรง หน้าจอจริงกลับตั้งแต่เริ่มสอนและคงเลย์เอาต์สอนเดิมตลอด teaching ไม่มี pop-up ค้างหรือโผล่ระหว่างสอน กราฟิกไม่ทำให้เข้าใจผิดว่ามีผลสาธิตที่ยังไม่เกิด
 
