@@ -1,4 +1,4 @@
-# BBN Video Studio 0.4.0
+# BBN Video Studio 0.4.1
 
 ชุด BBN-AI-Edit ทั้ง 48 สกิล สำหรับ Claude Code และ Codex รวม Long, Short, motion, เสียง, thumbnail และชุดข้อความ YouTube
 
