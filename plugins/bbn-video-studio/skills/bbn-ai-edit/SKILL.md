@@ -14,6 +14,10 @@ This is the single entry point for the complete BBN episode workflow. Reuse the 
 
 Use one local editing owner per episode, without subagents or concurrent editors unless the user changes that constraint. For a scoped standalone Codex worker, inspect installed feature flags and disable multi-agent and automatic global-memory/chronicle behavior for that invocation when enabled; keep native image generation available for the authorized thumbnail flow. Do not modify global config or other runtimes' memories. If an active worker attempts out-of-scope spawning or memory writes, stop it at a safe checkpoint, verify the old PID is gone, and resume the same thread with per-invocation scope guards and existing evidence rather than starting the episode again. Read only the specialist sections needed for the current deliverable. Resolve runtime, model, font and asset paths on the current host; imported absolute `/Users/<name>/` paths and old episode helpers are provenance; write paths as `~/`, `$HOME/` or skill-relative, not proof of installation. Reuse available environments and model caches, run heavy models sequentially on memory-constrained machines, and do not switch private footage to cloud processing without authorization.
 
+## Long style approval — EP254, 2026-10-30
+
+สำหรับ Long ให้ใช้ [แนวทาง EP254 ที่เจ้าของรับรอง](../bbn-ai-edit-v2/references/approved-long-style.md) ผ่าน bbn-ai-edit-v2 การรับรองนี้ไม่ครอบคลุม Short หรือปก และไม่เริ่มงานแก้/ส่ง/เผยแพร่จากการอัปเดตสกิลเอง
+
 ## Short feedback override — 2026-10-30
 
 For a Long-promotion teaser, apply [teaser and ending revisions](../bbn-ai-short-fullscreen/references/teaser-and-ending-revisions.md) before the tutorial-specific structure below. Use the latest corrected EP and duration, keep genuine complete speech, include the actual authorized music file in the editable assets and final mix, and use the requested CTA without adding new speech. Text-only corrections preserve audio/timing and update the editable source and project bundle.
