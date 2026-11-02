@@ -52,3 +52,4 @@
 - [visual-procedural-guides](visual-procedural-guides/SKILL.md)
 - [waapi](waapi/SKILL.md)
 - [website-to-hyperframes](website-to-hyperframes/SKILL.md)
+- [trendshift-github-trends](trendshift-github-trends/SKILL.md)
