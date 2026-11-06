@@ -56,7 +56,7 @@
 - [x] Validate skill links/manifests and synchronize distribution without staging unrelated work.
 - [x] Back up changed files and install only task files/routing blocks on local Codex and Mac Studio active skill paths.
 - [x] Produce a clearly marked KAN-93 demo with all three modes from real public excerpts; record environment, source hashes, frames and audio checks.
-- [ ] Upload demo/report, attach links to KAN-93, and submit review to the configured Patsinee route. Keep approval pending.
+- [x] Upload demo/report, attach links to KAN-93, and submit review to the configured Patsinee route. Keep approval pending.
 
 ## Progress
 
@@ -72,3 +72,7 @@
 - Plugin validation passes for local use. Existing marketplace-directory warnings: missing license declaration and listing icon; do not invent a license for this repository.
 
 - Final Mac Studio demo verified: 46.4s/1392 frames at 30fps; 15 boundary/hold frames inspected; protected-picture SSIM 0.999314, -17.31 LUFS and -4.25 dBTP. Real-time listening and Patsinee approval remain pending.
+
+- Delivery complete: 9 Drive files hash/size verified with zero differences. Folder: https://drive.google.com/drive/folders/1UhQWkAGe1uxsUjT-cez3S8jEJxp4OEnP . Demo: https://drive.google.com/file/d/1dIRm2cM2ddcZYGWrKThkNsRaXzTSqqhR/view .
+- Draft PR https://github.com/kruoop/plugins/pull/1 is open and mergeable; implementation commit ea16ad49a9526c6b0f162b50a4a2f5537ec723b1. No merge performed.
+- KAN-93 comment 10107 contains deliverables, checks and limitations. Ticket is In Review. Patsinee received the review DM: https://boombignoseworkspace.slack.com/archives/D0CB93V6BQA/p1793952127788149 . Formal approval and real-time listening remain pending; do not mark Done without them.
