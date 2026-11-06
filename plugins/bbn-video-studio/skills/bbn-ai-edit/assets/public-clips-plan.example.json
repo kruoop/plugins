@@ -1,0 +1,12 @@
+{
+  "base": "EP_Long.mp4",
+  "output": "EP_Long_public-clips-review.mp4",
+  "timing_reviewed": false,
+  "protected": [[20, 60]],
+  "speech_free": [[15, 16]],
+  "cues": [
+    {"mode": "ref", "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ", "start": 137, "end": 140, "at": 3, "channel": "Blender", "audio": "mute", "rights_note": "Check source license/music for the actual use; excerpt modified."},
+    {"mode": "meme", "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ", "start": 150, "end": 152, "at": 10, "channel": "Blender", "audio": "mute", "rights_note": "Check source license/music for the actual use; excerpt modified."},
+    {"mode": "gag", "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ", "start": 160, "end": 161, "at": 15, "channel": "Blender", "audio": "replace", "rights_note": "Check source license/music for the actual use; excerpt modified."}
+  ]
+}

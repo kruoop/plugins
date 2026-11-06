@@ -10,6 +10,12 @@ Resolve sibling skills from this bundle first. For browser control, read the sib
 
 # BBN AI EDIT V2
 
+<!-- kan-93-public-clips:start -->
+## คลิปสาธารณะประกอบ Long
+
+งานแปะเรฟ มีม หรือ gag จากลิงก์ ใช้ [public-clips](../bbn-ai-edit/references/public-clips.md) และ helper ของ bbn-ai-edit บน timeline หลังตัดคำพูด เครดิตชื่อช่อง/ลิงก์ครบทุก insert และรวมรายการใน Description รักษาเลย์เอาต์นอกคิว ไม่วางทับช่วงสอนสำคัญ และไม่ใช้เสียงคลิปแทน narration ที่ยังพูดอยู่ ส่งตรวจภาพ/เสียงจาก encoded output ตามกฎ V2 เดิม
+<!-- kan-93-public-clips:end -->
+
 สกิลตัดต่อเฉพาะคลิป Long ของ BoomBigNose โดยใช้ **EP228 Edit2 Long v3** เป็นตัวอย่างที่ผู้ใช้รับรองเมื่อ 6 ตุลาคม 2026 ใช้หน้าจอและผู้พูดจริง แทรกเนื้อหาให้ตรงกับสิ่งที่อธิบาย และเปลี่ยนเลย์เอาท์ด้วยแอนิเมชันเฉพาะช่วงที่ช่วยให้เข้าใจ
 
 ตามการรวม flow ที่ผู้ใช้กำหนดเมื่อ 8 ตุลาคม 2026 ใช้ [bbn-ai-edit](../bbn-ai-edit/SKILL.md) เป็นจุดเริ่มงานหลักและใช้สกิลนี้สำหรับ Long เท่านั้น เรียก `$bbn-ai-edit-v2 ตัด EP…` โดยตรงให้ทำเฉพาะ Long; ถ้าผู้ใช้ขอครบชุดหรือระบุ Short, Skool, Package หรือปกด้วย ให้ใช้ flow ของ bbn-ai-edit สำหรับงานเหล่านั้น อ่านกฎร่วมและการส่งงานจาก bbn-ai-edit โดยไม่เริ่ม intake ใหม่หรือเรียก Long ซ้ำ คำสั่งล่าสุดของผู้ใช้มีลำดับความสำคัญสูงสุด
