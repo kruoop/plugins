@@ -10,6 +10,12 @@ Resolve sibling skills from this bundle first. For browser control, read the sib
 
 # BBN AI Edit
 
+<!-- kan-93-public-clips:start -->
+## แทรกคลิปสาธารณะ: เรฟ / มีม / gag — v1.0
+
+เมื่อรับลิงก์คลิปพร้อมช่วงเวลาและจุดแทรกใน EP ให้อ่าน [Public clip insertion](references/public-clips.md) แล้วใช้ `sh scripts/public_clips.sh render --plan <cue-sheet.json>` เพื่อดึงเฉพาะช่วง แทรกภาพ/เสียง ใส่เครดิต และสร้างรายการแหล่งที่มาสำหรับ Description จากคำสั่งเดียว ใช้ transcript/cut plan บนนาฬิกา EP หลังตัดคำพูดและช่วงห้ามบังการสอน ไม่ขยายความยาว EP ไม่โหลดเต็มคลิปเมื่อดึงช่วงไม่ได้ และไม่แทนเสียงพูดด้วยเสียงคลิปนอกช่วงที่ตรวจแล้วว่าไม่มี narration รองรับคำสั่งผ่าน Slack route เดิมโดยไม่สร้าง bot/watcher ใหม่ ตรวจ encoded output และส่งผ่านเส้นทางที่อนุญาตเดิม; การติดตั้งไม่เริ่มแก้ EP หรือเผยแพร่วิดีโอเอง
+<!-- kan-93-public-clips:end -->
+
 This is the single entry point for the complete BBN episode workflow. Reuse the installed specialist skills below; their current references and accepted episode assets remain authoritative. Do not copy their instructions into a second editing system.
 
 Use one local editing owner per episode, without subagents or concurrent editors unless the user changes that constraint. For a scoped standalone Codex worker, inspect installed feature flags and disable multi-agent and automatic global-memory/chronicle behavior for that invocation when enabled; keep native image generation available for the authorized thumbnail flow. Do not modify global config or other runtimes' memories. If an active worker attempts out-of-scope spawning or memory writes, stop it at a safe checkpoint, verify the old PID is gone, and resume the same thread with per-invocation scope guards and existing evidence rather than starting the episode again. Read only the specialist sections needed for the current deliverable. Resolve runtime, model, font and asset paths on the current host; imported absolute `/Users/<name>/` paths and old episode helpers are provenance; write paths as `~/`, `$HOME/` or skill-relative, not proof of installation. Reuse available environments and model caches, run heavy models sequentially on memory-constrained machines, and do not switch private footage to cloud processing without authorization.
